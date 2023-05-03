@@ -1,5 +1,6 @@
-var React = require('react');
-var ReactDOM = require('react-dom');        //require modules
+//required modules usinfg ES6 syntax
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 // ReactDOM.render('kya dikhana hai', 'kaha dikhana hai', 'callback function');  //render() shows
 // kya dikhana hai needs react module
