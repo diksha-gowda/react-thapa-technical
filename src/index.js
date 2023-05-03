@@ -5,11 +5,19 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+console.log(root);
+let a = document.getElementById('root');
+console.log("root " + a);
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  // <React.StrictMode>
+  //   <App />
+  // </React.StrictMode>
+  <h1>Bleh bleh bleh</h1>
 );
+
+// ReactDOM package provides DOM-specific methods
+// createRoot() method lets you create a root to display React components inside a browser DOM Node
+// render() method shows
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
