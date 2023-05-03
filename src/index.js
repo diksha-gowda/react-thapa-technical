@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import App1 from './App1';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -9,10 +10,10 @@ console.log(root);
 let a = document.getElementById('root');
 console.log("root " + a);
 root.render(
-  // <React.StrictMode>
-  //   <App />
-  // </React.StrictMode>
-  <h1>Bleh bleh bleh</h1>
+  <React.StrictMode>
+    <App />
+    <App1 />
+  </React.StrictMode>
 );
 
 // ReactDOM package provides DOM-specific methods
