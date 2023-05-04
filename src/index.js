@@ -5,22 +5,17 @@ import ReactDOM from 'react-dom';
 // kya dikhana hai needs react module
 // kaha dikhana hai needs react-dom module
 
-const name = "Diksha Gowda";
+const fname = "Diksha";
+const lname = "Gowda";
 
+// Using Template Literals (backticks (`))
+console.log(`my name is ${fname}`);
 
 ReactDOM.render( 
 <>
-<h1><i>My name is {name}</i></h1>
-<p>my lucky no is {2+3}</p>
-<p>my lucky no is {Math.random()}</p>
-{/* <p>Using statement inside curly braces will give errore {
-    if( 3<4 ){
-        console.log(true);
-        } else{
-        console.log(false);
-        }
-}</p> */}
+<h1><i>My name is {fname + "" + lname}</i></h1>
+<h1><i>My name is {fname} {lname}</i></h1>
+<p><i>Using template literals :-
+{`my name is ${fname} ${lname} and my lucky no is ${5+5}`}
+</i></p>
 </>,document.getElementById('root'));
-
-// use javascript inside html
-// only expressions can be used inside {} , not statements
