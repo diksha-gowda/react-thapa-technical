@@ -5,14 +5,22 @@ import ReactDOM from 'react-dom';
 // kya dikhana hai needs react module
 // kaha dikhana hai needs react-dom module
 
+const name = "Diksha Gowda";
+
+
 ReactDOM.render( 
 <>
-<h1>Hello World!!</h1>
-<p>Plz like and share</p>
-<h2>plz subscribe</h2>
+<h1><i>My name is {name}</i></h1>
+<p>my lucky no is {2+3}</p>
+<p>my lucky no is {Math.random()}</p>
+{/* <p>Using statement inside curly braces will give errore {
+    if( 3<4 ){
+        console.log(true);
+        } else{
+        console.log(false);
+        }
+}</p> */}
 </>,document.getElementById('root'));
 
-// // Using React Fragment to get rid of extra node
-//     ways:-
-//     1.<React.Fragment></React.Fragment>
-//     2.<></>
+// use javascript inside html
+// only expressions can be used inside {} , not statements
