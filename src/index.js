@@ -1,16 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import * as ques from './App';
+import Card from './Card';
 
 ReactDOM.render(
     <>
-        <ol>
-            <li>Thapa</li>
-            <li>{ques.default}</li>
-            <li>{ques.favprog}</li>
-            <li>{ques.myName()}</li>
-            <li>{ques.myNames()}</li>
-        </ol>
+        <Card imgSrc="https://wallpapercave.com/wp/wp4056410.jpg" title="Original Series" seriesName="Grey's Anatomy" link="https://www.netflix.com/in/title/80990668?source=35" />
+        <Card imgSrc="https://wallpapercave.com/wp/wp4056410.jpg" title="Original Series" seriesName="himym" link="https://www.netflix.com/in/title/80990668?source=35" />
+        <Card imgSrc="https://wallpapercave.com/wp/wp4056410.jpg" title="Original Series" seriesName="Friends" link="https://www.netflix.com/in/title/80990668?source=35" />
+        <Card imgSrc="https://wallpapercave.com/wp/wp4056410.jpg" title="Original Series" seriesName="TVD" link="https://www.netflix.com/in/title/80990668?source=35" />
     </>,
     document.getElementById("root")
 );
