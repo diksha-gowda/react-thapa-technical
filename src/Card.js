@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './card.css';
 
 function Card(props){
     console.log(props);     //will return evreything as an object
