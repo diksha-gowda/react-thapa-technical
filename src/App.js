@@ -1,15 +1,7 @@
 import Amazon from './Amazon';
 import Netflix from './Netflix';
 
-const favSeries = 'netflfix';
-const Favseries = ()=>{
-if ( favSeries === 'netflix') {
-    return <Netflix />
-} else {
-  return <Amazon />
-}
-}
-
+const favSeries = 'netfhjhlix';
 const App = () => {
   return (
     <>
@@ -18,7 +10,7 @@ const App = () => {
           <i>bleh bleh bleh</i>
         </b>
       </h1>
-      <Favseries />
+      { (favSeries === 'netflix')?<Netflix />:<Amazon />}
     </>
   );
 };
