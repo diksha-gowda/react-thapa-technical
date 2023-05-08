@@ -15,6 +15,7 @@ ReactDOM.render(
             return (
                 <div className="row">
                     <Card
+                        key={val.id}
                         imgSrc={val.poster_path}
                         title={val.title}
                         seriesName={val.original_title}
