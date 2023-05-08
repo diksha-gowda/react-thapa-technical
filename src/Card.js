@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './card.css';
 
 function Card(props){
-    console.log(props);     //will return evreything as an object
+    // console.log(props);     //will return everything as an object
     return(
     <div className='cards'>
         <div className='card'>
