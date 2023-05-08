@@ -1,17 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Card from './Card';
-import Sdata from './Sdata';
-console.log(Sdata[0]);
-
+import Result from './Result';
+// console.log(Result[0]);
 
 ReactDOM.render(
     <>
-        <Card imgSrc={Sdata[0].imgscr} title={Sdata[0].title} seriesName={Sdata[0].sname} link={Sdata[0].links} />
-        <Card imgSrc={Sdata[1].imgscr} title={Sdata[1].title} seriesName={Sdata[1].sname} link={Sdata[1].links} />
-        <Card imgSrc={Sdata[2].imgscr} title={Sdata[2].title} seriesName={Sdata[2].sname} link={Sdata[2].links} />
-        <Card imgSrc={Sdata[3].imgscr} title={Sdata[3].title} seriesName={Sdata[3].sname} link={Sdata[3].links} />
-        <Card imgSrc={Sdata[4].imgscr} title={Sdata[4].title} seriesName={Sdata[4].sname} link={Sdata[4].links} />
+        <Card imgSrc={Result[0].poster_path} title={Result[0].title} seriesName={Result[0].original_title} link={Result[0].media_type} />
+        <Card imgSrc={Result[1].poster_path} title={Result[1].title} seriesName={Result[1].original_title} link={Result[1].media_type} />
+        <Card imgSrc={Result[2].poster_path} title={Result[2].title} seriesName={Result[2].original_title} link={Result[2].media_type} />
+        <Card imgSrc={Result[3].poster_path} title={Result[3].title} seriesName={Result[3].original_title} link={Result[3].media_type} />
+        <Card imgSrc={Result[4].poster_path} title={Result[4].title} seriesName={Result[4].original_title} link={Result[4].media_type} />
     </>,
     document.getElementById("root")
 );

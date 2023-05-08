@@ -7,11 +7,11 @@ function Card(props){
     return(
     <div className='cards'>
         <div className='card'>
-            <img src={props.imgSrc} alt='myPic' className='card__img' />
+            <img src={props.poster_path} alt='myPic' className='card__img' />
             <div className='card__info'>
                 <span className='card__category'>{props.title}</span>
-                <h3 className='card__title'>{props.seriesName}</h3>
-                <a href={props.link} target='_blank'>
+                <h3 className='card__title'>{props.original_title}</h3>
+                <a href={props.media_type} target='_blank'>
                     <button> Watch Now</button>
                 </a>
             </div>
