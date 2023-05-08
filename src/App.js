@@ -1,5 +1,14 @@
-import logo from "./logo.svg";
-import "./App.css";
+import Amazon from './Amazon';
+import Netflix from './Netflix';
+
+const favSeries = 'netflfix';
+const Favseries = ()=>{
+if ( favSeries === 'netflix') {
+    return <Netflix />
+} else {
+  return <Amazon />
+}
+}
 
 const App = () => {
   return (
@@ -9,20 +18,7 @@ const App = () => {
           <i>bleh bleh bleh</i>
         </b>
       </h1>
-      {Result.map((val, index) => {
-        console.log(index);
-        return (
-          <div className="row">
-            <Card
-              key={val.id}
-              imgSrc={val.poster_path}
-              title={val.title}
-              seriesName={val.original_title}
-              link={val.links}
-            />
-          </div>
-        );
-      })}
+      <Favseries />
     </>
   );
 };
