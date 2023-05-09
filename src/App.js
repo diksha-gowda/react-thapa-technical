@@ -11,18 +11,26 @@ const getRandomColor = ()=>{
 const App = () => {
   const purple = '#8e44ad';
   const [bg, setBg] = useState(purple); // bg will fetch purple
-  const bgChange = ()=>{
+
+  const [name, setName] = useState('Click Me');
   let newbg = getRandomColor();
-  console.log(newbg);
-  setBg(newbg);
+  
+  const bgChange = ()=>{
+    setBg(newbg);
+    setName("Ouch!! 😨");
+}
+  const bgBank = ()=>{
+    setBg(newbg);
+    setName("Aiyyo 😱");
 }
   return (
     <>
         <div style={{ backgroundColor: bg}}>
-          <button onClick={bgChange}>Click Me</button>
+          <button onClick={bgChange} onDoubleClick={bgBank}>{name}</button>
         </div>
     </>
   )
 }
+
 
 export default App;
