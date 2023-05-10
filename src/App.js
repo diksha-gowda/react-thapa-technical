@@ -1,36 +1,31 @@
-import React, { useState } from 'react'
-const getRandomColor = ()=>{
-  let letters = '0123456789ABCDEF';
-  let color = '#';
-  for (let i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
-}
+import React, {useState} from 'react'
 
 const App = () => {
-  const purple = '#8e44ad';
-  const [bg, setBg] = useState(purple); // bg will fetch purple
-
-  const [name, setName] = useState('Click Me');
-  let newbg = getRandomColor();
   
-  const bgChange = ()=>{
-    setBg(newbg);
-    setName("Ouch!! 😨");
-}
-  const bgBank = ()=>{
-    setBg(newbg);
-    setName("Aiyyo 😱");
-}
+  const [name, setName] = useState("");
+  const [fullName, setFullName] = useState();
+  const inputEvent = (event)=>{
+    setName(event.target.value);
+  }
+  const onSubmit = ()=>{
+    setFullName(name);
+  }
   return (
     <>
-        <div style={{ backgroundColor: bg}}>
-          <button onMouseEnter={bgChange} onMouseLeave={bgBank}>{name}</button>
-        </div>
+      <div>
+        <h1>Hello, {fullName}</h1>
+        <input type='text' placeholder='Enter your name' onChange={inputEvent} value={name}/>
+        <button onClick={onSubmit}>Click 👍</button>
+      </div>
     </>
   )
 }
-
-
 export default App;
+
+
+// // In React there are two types of components :- 
+//   Controlled and
+//   Uncontrolled Component
+
+// In a controlled component, form data is handled by a React Component,
+// the alternative is uncontrolled components, where form data is handled by the DOM itself.
