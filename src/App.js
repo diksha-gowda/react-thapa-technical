@@ -4,55 +4,40 @@ const App = () => {
   const [fullName, setFullName] = useState({
     fname: "",
     lname: "",
-    email: ""
+    email: "",
+    phone: ""
   });
   const inputEvent = (event)=>{
     // event.target.attributeName
-    const value = event.target.value;
-    const name = event.target.name;
-    const placeholder = event.target.placeholder;
-    console.log("Value " + value);
-    console.log("Name " + name);
-    console.log("Placeholder " + placeholder);
+    const {name, value} = event.target;
     setFullName((preValue)=>{
-      if( name === 'fName'){
-        return {
-          fname: value,
-          lname: preValue.lname,
-          email: preValue.email,
-        };
-      } else if( name === 'lName'){
-        return {
-          fname: preValue.fname,
-          lname: value,
-          email: preValue.email,
-        };
-      } else if( name === 'email'){
-        return {
-          fname: preValue.fname,
-          lname: preValue.lname,
-          email: value,
-        };
+      console.log(preValue);
+      return {
+        ...preValue,
+        [name]: value,
       }
     });
+
   }
 
   const onSubmits = (event)=>{
     event.preventDefault();
     alert("Submit");
-    // window.location.reload(false);
+    window.location.reload(false);
   }
   return (
     <>
     <div className='main_div'>
     <form onSubmit={onSubmits}>
       <div>
-      Name: {fullName.fname} {fullName.lname}
-      <br></br>
-      Email: {fullName.email}
-        <input type='text' placeholder='Enter your first name' name='fName' onChange={inputEvent}/>
-        <input type='text' placeholder='Enter your last name' name='lName' onChange={inputEvent}/>
+      <p>{fullName.fname}</p>
+      <p>{fullName.lname}</p>
+      <p>{fullName.email}</p>
+      <p>{fullName.phone}</p>
+        <input type='text' placeholder='Enter your first name' name='fname' onChange={inputEvent}/>
+        <input type='text' placeholder='Enter your last name' name='lname' onChange={inputEvent}/>
         <input type='email' placeholder='Enter your email' name='email' onChange={inputEvent}/>
+        <input type='tel' placeholder='Enter your phone number' name='phone' onChange={inputEvent} />
         <button type='submit'>Submit 👍</button>
       </div>
       </form>
