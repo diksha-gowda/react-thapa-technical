@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import Propsss from './Propsss';
 
 const App = () => {
   const [fullName, setFullName] = useState({
@@ -42,6 +43,7 @@ const App = () => {
       </div>
       </form>
       </div>
+      <Propsss />
     </>
   )
 }
